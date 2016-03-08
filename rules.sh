@@ -1,5 +1,5 @@
 #!/bin/bash
-#this rules may diferen for 
+#this rules may differen for 
 #a different cases
 #this will change when is a nessery
 ufw allow  1:21000/tcp
