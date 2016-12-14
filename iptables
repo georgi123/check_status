@@ -17,3 +17,11 @@ iptables -F
 ◾-X : Delete chain.
 ◾-t table_name : Select table (called nat or mangle) and delete/flush rules.
 ◾-P : Set the default policy (such as DROP, REJECT, or ACCEPT).
+#3: Delete Firewall Rules
+
+To display line number along with other information for existing rules, enter:
+
+# iptables -L INPUT -n --line-numbers
+ # iptables -L OUTPUT -n --line-numbers
+ # iptables -L OUTPUT -n --line-numbers | less
+ # iptables -L OUTPUT -n --line-numbers | grep 202.54.1.1
