@@ -1,0 +1,5 @@
+iptables -L -n -v
+iptables -L -n -v
+iptables -n -L -v --line-numbers
+iptables -L INPUT -n -v
+iptables -L OUTPUT -n -v --line-numbers
