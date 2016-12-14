@@ -3,3 +3,17 @@ iptables -L -n -v
 iptables -n -L -v --line-numbers
 iptables -L INPUT -n -v
 iptables -L OUTPUT -n -v --line-numbers
+iptables -F
+ # iptables -X
+ # iptables -t nat -F
+ # iptables -t nat -X
+ # iptables -t mangle -F
+ # iptables -t mangle -X
+ # iptables -P INPUT ACCEPT
+ # iptables -P OUTPUT ACCEPT
+ # iptables -P FORWARD ACCEPT
+ 
+◾-F : Deleting (flushing) all the rules.
+◾-X : Delete chain.
+◾-t table_name : Select table (called nat or mangle) and delete/flush rules.
+◾-P : Set the default policy (such as DROP, REJECT, or ACCEPT).
