@@ -25,3 +25,5 @@ To display line number along with other information for existing rules, enter:
  # iptables -L OUTPUT -n --line-numbers
  # iptables -L OUTPUT -n --line-numbers | less
  # iptables -L OUTPUT -n --line-numbers | grep 202.54.1.1
+# iptables -D INPUT 4
+# iptables -D INPUT -s 202.54.1.1 -j DROP
