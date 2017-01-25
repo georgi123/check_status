@@ -1,0 +1,19 @@
+#! /bin/sh
+# credit to a very good friend of mine, Joao Faria, i m not any good on scripting ....
+#
+# can also use this ....
+#GUID=$(grep guid /root/.suse_register.log | grep register | grep processor| head -n 1 | sed 's/^.*<guid>//g' | sed 's/<\/guid.*$//g')
+
+#but I opted for this one, since only exists after running 'suse_register' ...
+
+if [ ! -f /var/cache/SuseRegister/lastzmdconfig.cache ];
+then
+echo "Not Active!!"
+else
+GUID=$(grep guid /var/cache/SuseRegister/lastzmdconfig.cache | grep zmdconfig | grep catalog | grep success |grep OK | head -n 1 | sed 's/^.*<guid>//g' | sed 's/<\/guid.*$//g')
+if [ -z "${GUID//[a-z0-9]}" ]; then
+echo "Activated!!"
+else
+echo "Not Active!!"
+fi
+fi
