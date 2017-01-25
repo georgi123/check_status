@@ -1,0 +1,10 @@
+#!/bin/bash
+
+reg=/etc/sysconfig/rhn/systemid
+ if [ -f $reg]
+then 
+ echo "server was register"
+else
+ mutt -s "unregister" gogo3888@mail.bg
+elif
+fi
